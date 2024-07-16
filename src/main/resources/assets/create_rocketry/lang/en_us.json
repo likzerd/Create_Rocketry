@@ -1,4 +1,6 @@
 {
   "item.create_rocketry.bauxite": "Bauxite",
-  "item.create_rocketry.raw_bauxite": "Raw Bauxite"
+  "item.create_rocketry.raw_bauxite": "Raw Bauxite",
+
+  "creativetab.create_rocketry_tab": "Create Rocketry"
 }

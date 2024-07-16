@@ -1,6 +1,7 @@
 package net.likzerd.create_rocketry;
 
 import com.mojang.logging.LogUtils;
+import net.likzerd.create_rocketry.items.ModCreativeModTabs;
 import net.likzerd.create_rocketry.items.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -26,6 +27,8 @@ public class CreateRocketry
 
     public CreateRocketry () {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
 
