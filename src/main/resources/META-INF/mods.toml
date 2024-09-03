@@ -66,7 +66,7 @@ description='''funni goofy create space mod'''
 [[dependencies.create_rocketry]]
 modId="create"
 mandatory=true
-versionRange="[0.5.1.g,)"
+versionRange="[0.5.1.f,)"
 ordering="NONE"
 side="BOTH"
 
