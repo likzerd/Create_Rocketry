@@ -11,10 +11,18 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, CreateRocketry.MOD_ID);
 
-    public static final RegistryObject<Item> BAUXITE = ITEMS.register("bauxite",
+    public static final RegistryObject<Item> BAUXITE_ROCK = ITEMS.register ("bauxite_rock",
             () -> new Item(new Item.Properties ()));
-    public static final RegistryObject<Item> RAW_BAUXITE = ITEMS.register ("raw_bauxite",
+    public static final RegistryObject<Item> CRUSHED_BAUXITE = ITEMS.register ("crushed_bauxite",
             () -> new Item(new Item.Properties ()));
+    public static final RegistryObject<Item> BAUXITE_DUST = ITEMS.register ("bauxite_dust",
+            () -> new Item(new Item.Properties ()));
+    public static final RegistryObject<Item> ALUMINIUM_NUGGET = ITEMS.register ("aluminium_nugget",
+            () -> new Item(new Item.Properties ()));
+    public static final RegistryObject<Item> ALUMINIUM_INGOT = ITEMS.register ("aluminium_ingot",
+            () -> new Item(new Item.Properties ()));
+
+
 
 
 

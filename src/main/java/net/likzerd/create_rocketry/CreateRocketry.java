@@ -1,6 +1,7 @@
 package net.likzerd.create_rocketry;
 
 import com.mojang.logging.LogUtils;
+import net.likzerd.create_rocketry.block.ModBlocks;
 import net.likzerd.create_rocketry.items.ModCreativeModTabs;
 import net.likzerd.create_rocketry.items.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -31,6 +32,7 @@ public class CreateRocketry
         ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -46,8 +48,7 @@ public class CreateRocketry
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         if(event.getTabKey () == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.BAUXITE);
-            event.accept(ModItems.RAW_BAUXITE);
+
         }
     }
 
