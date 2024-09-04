@@ -19,7 +19,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, CreateRocketry.MOD_ID);
 
 
-    private static final RegistryObject<Block> BAUXITE_ROCK = registerBlock("bauxite_rock",
+    public static final RegistryObject<Block> BAUXITE_ROCK = registerBlock("bauxite_rock",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANDESITE)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
