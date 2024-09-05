@@ -14,7 +14,7 @@ public class ModCreativeModTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateRocketry.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> CREATE_ROCKETRY_TAB = CREATIVE_MODE_TABS.register("create_rocketry_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.RAW_BAUXITE.get())) // fix this shitter item later
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BAUXITE_DUST.get()))
                     .title(Component.translatable("creativetab.create_rocketry_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.BAUXITE_ROCK.get());
