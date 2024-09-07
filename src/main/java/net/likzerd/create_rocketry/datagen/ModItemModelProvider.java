@@ -18,7 +18,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.ALUMINIUM_INGOT);
-        simpleItem(ModItems.BAUXITE_ROCK);
         simpleItem(ModItems.ALUMINIUM_NUGGET);
         simpleItem(ModItems.BAUXITE_DUST);
         simpleItem(ModItems.CRUSHED_BAUXITE);

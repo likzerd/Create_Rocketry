@@ -11,8 +11,6 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, CreateRocketry.MOD_ID);
 
-    public static final RegistryObject<Item> BAUXITE_ROCK = ITEMS.register ("bauxite_rock",
-            () -> new Item(new Item.Properties ()));
     public static final RegistryObject<Item> CRUSHED_BAUXITE = ITEMS.register ("crushed_bauxite",
             () -> new Item(new Item.Properties ()));
     public static final RegistryObject<Item> BAUXITE_DUST = ITEMS.register ("bauxite_dust",

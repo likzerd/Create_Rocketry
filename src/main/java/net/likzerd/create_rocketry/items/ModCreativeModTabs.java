@@ -1,6 +1,7 @@
 package net.likzerd.create_rocketry.items;
 
 import net.likzerd.create_rocketry.CreateRocketry;
+import net.likzerd.create_rocketry.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -17,7 +18,7 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BAUXITE_DUST.get()))
                     .title(Component.translatable("creativetab.create_rocketry_tab"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(ModItems.BAUXITE_ROCK.get());
+                        pOutput.accept(ModBlocks.BAUXITE_ROCK.get().asItem());
                         pOutput.accept(ModItems.CRUSHED_BAUXITE.get());
                         pOutput.accept(ModItems.BAUXITE_DUST.get());
                         pOutput.accept(ModItems.ALUMINIUM_INGOT.get());
