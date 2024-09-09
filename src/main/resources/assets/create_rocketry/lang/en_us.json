@@ -4,5 +4,8 @@
   "item.create_rocketry.aluminium_nugget": "Aluminium Nugget",
   "item.create_rocketry.aluminium_ingot": "Aluminium Ingot",
 
+  "block.create_rocketry.bauxite_rock": "Bauxite Rock",
+
+
   "creativetab.create_rocketry_tab": "Create Rocketry"
 }
