@@ -1,5 +1,8 @@
 {
-
+  "item.create_rocketry.crushed_bauxite": "Crushed Bauxite",
+  "item.create_rocketry.bauxite_dust": "Bauxite Dust",
+  "item.create_rocketry.aluminium_nugget": "Aluminium Nugget",
+  "item.create_rocketry.aluminium_ingot": "Aluminium Ingot",
 
   "creativetab.create_rocketry_tab": "Create Rocketry"
 }
