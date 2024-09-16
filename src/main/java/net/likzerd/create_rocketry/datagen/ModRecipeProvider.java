@@ -7,8 +7,9 @@ import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.function.Consumer;
 
-public class ModRecipieProvider extends RecipeProvider implements IConditionBuilder {
-    public ModRecipieProvider(PackOutput pOutput) {
+@Deprecated(forRemoval = true)
+public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
+    public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
 

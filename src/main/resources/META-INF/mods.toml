@@ -32,11 +32,11 @@ ordering="NONE"
 side="BOTH"
 
 [[dependencies.create_rocketry]]
-modId = "valkyrienskies"
-mandatory = true
-versionRange = "[${vs2_version},)"
-ordering = "AFTER"
-side = "BOTH"
+modId="valkyrienskies"
+mandatory=true
+versionRange="[2,)"
+ordering="AFTER"
+side="BOTH"
 
 modLoader="kotlinforforge"
 loaderVersion="[4.10,)"

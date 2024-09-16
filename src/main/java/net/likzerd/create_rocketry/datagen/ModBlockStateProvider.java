@@ -8,6 +8,7 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
+@Deprecated(forRemoval = true)
 public class ModBlockStateProvider extends BlockStateProvider{
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, CreateRocketry.MOD_ID, exFileHelper);
@@ -15,7 +16,7 @@ public class ModBlockStateProvider extends BlockStateProvider{
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(ModBlocks.BAUXITE_ROCK);
+//        blockWithItem(ModBlocks.BAUXITE_ROCK);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

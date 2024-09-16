@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
-
+@Deprecated(forRemoval = true)
 public class ModBlockLootTables extends BlockLootSubProvider {
     public ModBlockLootTables() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
@@ -18,8 +18,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.BAUXITE_ROCK.get());
     }
 
-    @Override
-    protected Iterable<Block> getKnownBlocks() {
-        return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
-    }
+//    @Override
+//    protected Iterable<Block> getKnownBlocks() {
+//        return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+//    }
 }

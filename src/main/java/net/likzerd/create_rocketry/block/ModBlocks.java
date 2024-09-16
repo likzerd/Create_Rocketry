@@ -1,7 +1,10 @@
 package net.likzerd.create_rocketry.block;
 
+import com.simibubi.create.foundation.data.SharedProperties;
+import com.tterrag.registrate.util.entry.BlockEntry;
 import net.likzerd.create_rocketry.CreateRocketry;
 import net.likzerd.create_rocketry.items.ModItems;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -14,27 +17,21 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
+import static com.simibubi.create.foundation.data.TagGen.pickaxeOnly;
+import static net.likzerd.create_rocketry.CreateRocketry.REGISTRATE;
+
 public class ModBlocks {
-    public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, CreateRocketry.MOD_ID);
+
+    public static final BlockEntry<Block> BAUXITE_ROCK = REGISTRATE
+            .block("bauxite_rock", Block::new)
+            .initialProperties(() -> Blocks.RAW_IRON_BLOCK)
+            .transform(pickaxeOnly())
+            .tag(BlockTags.NEEDS_STONE_TOOL)
+            .defaultLoot()
+            .simpleItem()
+            .register();
 
 
-    public static final RegistryObject<Block> BAUXITE_ROCK = registerBlock("bauxite_rock",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANDESITE)));
-
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
-        return toReturn;
-    }
-
-    private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
-    }
-
-
-    public static void register(IEventBus eventBus) {
-        BLOCKS.register(eventBus);
-    }
+    public static void register() {}
 
 }

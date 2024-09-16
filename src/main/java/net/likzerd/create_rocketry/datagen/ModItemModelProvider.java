@@ -10,6 +10,7 @@ import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
+@Deprecated(forRemoval = true)
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, CreateRocketry.MOD_ID, existingFileHelper);
@@ -17,10 +18,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        simpleItem(ModItems.ALUMINIUM_INGOT);
-        simpleItem(ModItems.ALUMINIUM_NUGGET);
-        simpleItem(ModItems.BAUXITE_DUST);
-        simpleItem(ModItems.CRUSHED_BAUXITE);
+//        simpleItem(ModItems.ALUMINIUM_INGOT);
+//        simpleItem(ModItems.ALUMINIUM_NUGGET);
+//        simpleItem(ModItems.BAUXITE_DUST);
+//        simpleItem(ModItems.CRUSHED_BAUXITE);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
