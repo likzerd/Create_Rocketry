@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "net.likzerd.create_rocketry.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8",
+  "client": [
+    "minecraft.ClientPacketListenerMixin",
+    "minecraft.MinecraftMixin"
+  ]
+}
