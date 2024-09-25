@@ -1,7 +1,13 @@
 package net.likzerd.create_rocketry.block;
 
+import com.simibubi.create.AllBlocks;
+import com.simibubi.create.Create;
+import com.simibubi.create.content.kinetics.mixer.MechanicalMixerBlockEntity;
+import com.simibubi.create.content.kinetics.mixer.MechanicalMixerRenderer;
+import com.simibubi.create.content.kinetics.mixer.MixerInstance;
 import com.simibubi.create.foundation.data.SharedProperties;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import net.likzerd.create_rocketry.CreateRocketry;
 import net.likzerd.create_rocketry.items.ModItems;
 import net.minecraft.tags.BlockTags;
@@ -24,12 +30,21 @@ public class ModBlocks {
 
     public static final BlockEntry<Block> BAUXITE_ROCK = REGISTRATE
             .block("bauxite_rock", Block::new)
-            .initialProperties(() -> Blocks.RAW_IRON_BLOCK)
+            .initialProperties(() -> Blocks.ANDESITE)
             .transform(pickaxeOnly())
             .tag(BlockTags.NEEDS_STONE_TOOL)
             .defaultLoot()
             .simpleItem()
             .register();
+    public static final BlockEntry<Block> ELECTROLYZER = REGISTRATE
+            .block("bauxite_rock", Block::new)
+            .initialProperties(() -> Blocks.ANDESITE)
+            .transform(pickaxeOnly())
+            .tag(BlockTags.NEEDS_STONE_TOOL)
+            .defaultLoot()
+            .simpleItem()
+            .register();
+
 
 
     public static void register() {}
