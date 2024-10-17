@@ -1,4 +1,4 @@
-package net.likzerd.create_rocketry.Electrolyzer;
+package net.likzerd.create_rocketry.blocks.electrolyzer;
 
 import com.jozufozu.flywheel.api.Instancer;
 import com.jozufozu.flywheel.api.MaterialManager;
@@ -6,9 +6,7 @@ import com.jozufozu.flywheel.api.instance.DynamicInstance;
 import com.jozufozu.flywheel.core.materials.FlatLit;
 import com.jozufozu.flywheel.core.materials.oriented.OrientedData;
 import com.simibubi.create.AllPartialModels;
-import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
 import com.simibubi.create.content.kinetics.base.flwdata.RotatingData;
-import com.simibubi.create.content.kinetics.mixer.MechanicalMixerBlockEntity;
 import com.simibubi.create.content.kinetics.simpleRelays.encased.EncasedCogInstance;
 import com.simibubi.create.foundation.render.AllMaterialSpecs;
 import com.simibubi.create.foundation.utility.AnimationTickHolder;
@@ -17,7 +15,7 @@ import net.minecraft.core.Direction;
 public class ElectrolyzerInstance extends EncasedCogInstance implements DynamicInstance {
     private final RotatingData mixerHead;
     private final OrientedData mixerPole;
-    private final MechanicalMixerBlockEntity mixer;
+    private final ElectrolyzerBlockEntity mixer;
 
     public ElectrolyzerInstance(MaterialManager materialManager, ElectrolyzerBlockEntity blockEntity) {
         super(materialManager, blockEntity, false);
@@ -31,7 +29,7 @@ public class ElectrolyzerInstance extends EncasedCogInstance implements DynamicI
     }
 
     protected Instancer<RotatingData> getCogModel() {
-        return this.materialManager.defaultSolid().material(AllMaterialSpecs.ROTATING).getModel(AllPartialModels.SHAFTLESS_COGWHEEL, ((KineticBlockEntity)this.blockEntity).getBlockState());
+        return this.materialManager.defaultSolid().material(AllMaterialSpecs.ROTATING).getModel(AllPartialModels.SHAFTLESS_COGWHEEL, this.blockEntity.getBlockState());
     }
 
     public void beginFrame() {

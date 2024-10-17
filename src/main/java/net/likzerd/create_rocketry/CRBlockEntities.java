@@ -1,26 +1,19 @@
 package net.likzerd.create_rocketry;
 
-import com.simibubi.create.AllBlocks;
-import com.simibubi.create.Create;
-import com.simibubi.create.content.kinetics.mixer.MechanicalMixerBlockEntity;
-import com.simibubi.create.content.kinetics.mixer.MechanicalMixerRenderer;
-import com.simibubi.create.content.kinetics.mixer.MixerInstance;
-import com.tterrag.registrate.util.nullness.NonNullSupplier;
-import net.likzerd.create_rocketry.Electrolyzer.ElectrolyzerBlock;
-import net.likzerd.create_rocketry.Electrolyzer.ElectrolyzerBlockEntity;
-import net.likzerd.create_rocketry.Electrolyzer.ElectrolyzerInstance;
-import net.likzerd.create_rocketry.Electrolyzer.ElectrolyzerRenderer;
-import net.likzerd.create_rocketry.block.ModBlocks;
-import net.minecraft.world.level.block.entity.BlockEntityType;
+import com.tterrag.registrate.util.entry.BlockEntityEntry;
+import net.likzerd.create_rocketry.blocks.electrolyzer.ElectrolyzerBlockEntity;
+import net.likzerd.create_rocketry.blocks.electrolyzer.ElectrolyzerInstance;
+import net.likzerd.create_rocketry.blocks.electrolyzer.ElectrolyzerRenderer;
+
+import static net.likzerd.create_rocketry.CreateRocketry.REGISTRATE;
 
 public class CRBlockEntities {
-    private static final BlockEntityType<ElectrolyzerBlockEntity>
+    public static final BlockEntityEntry<ElectrolyzerBlockEntity> ELECTROLYZER =
+            REGISTRATE.blockEntity("electrolyzer", ElectrolyzerBlockEntity::new)
+            .instance(() -> ElectrolyzerInstance::new)
+            .validBlocks(CRBlocks.ELECTROLYZER)
+            .renderer(() -> ElectrolyzerRenderer::new)
+            .register();
 
-        ELECTROLYZER = CreateRocketry.REGISTRATE.blockEntity("electrolyzer", ElectrolyzerBlockEntity::new).instance(() -> {
-            return ElectrolyzerInstance::new;
-        }).validBlocks(new NonNullSupplier[]{ModBlocks.ELECTROLYZER}).renderer(() -> {
-            return ElectrolyzerRenderer::new;
-        }).register();
-
-
+    public static void register() {}
 }

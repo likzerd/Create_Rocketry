@@ -8,7 +8,8 @@
   },
   "minVersion": "0.8",
   "client": [
-    "minecraft.ClientPacketListenerMixin",
-    "minecraft.MinecraftMixin"
+    "minecraft.client.ClientPacketListenerMixin",
+    "minecraft.client.GameRendererMixin",
+    "minecraft.client.MinecraftMixin"
   ]
 }

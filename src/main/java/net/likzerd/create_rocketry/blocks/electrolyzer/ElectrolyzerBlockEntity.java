@@ -1,4 +1,4 @@
-package net.likzerd.create_rocketry.Electrolyzer;
+package net.likzerd.create_rocketry.blocks.electrolyzer;
 
 import com.simibubi.create.AllRecipeTypes;
 import com.simibubi.create.AllSoundEvents;

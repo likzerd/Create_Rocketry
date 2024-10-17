@@ -1,16 +1,11 @@
 package net.likzerd.create_rocketry.items;
 
 import com.tterrag.registrate.util.entry.ItemEntry;
-import net.likzerd.create_rocketry.CreateRocketry;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 
 import static net.likzerd.create_rocketry.CreateRocketry.REGISTRATE;
 
-public class ModItems {
+public class CRItems {
 
     public static final ItemEntry<Item> CRUSHED_BAUXITE = REGISTRATE
             .item("crushed_bauxite", Item::new)

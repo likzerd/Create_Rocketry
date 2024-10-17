@@ -1,7 +1,6 @@
 package net.likzerd.create_rocketry.datagen;
 
 import net.likzerd.create_rocketry.CreateRocketry;
-import net.likzerd.create_rocketry.items.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;

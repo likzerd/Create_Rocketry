@@ -2,9 +2,11 @@ package net.likzerd.create_rocketry;
 
 import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
-import net.likzerd.create_rocketry.block.ModBlocks;
-import net.likzerd.create_rocketry.items.ModCreativeModTabs;
-import net.likzerd.create_rocketry.items.ModItems;
+import net.likzerd.create_rocketry.items.CRCreativeModTabs;
+import net.likzerd.create_rocketry.items.CRItems;
+import net.likzerd.create_rocketry.network.CRPackets;
+import net.likzerd.create_rocketry.network.PacketChannel;
+import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -17,14 +19,17 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(CreateRocketry.MOD_ID)
-public class CreateRocketry
-{
+public class CreateRocketry {
+
+    public static final ResourceLocation NETWORK_CHANNEL = asResource("main");
+
+    public static final PacketChannel PACKET_CHANNEL = new PacketChannel();
+
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "create_rocketry";
     // Directly reference a slf4j logger
@@ -39,9 +44,11 @@ public class CreateRocketry
 
         REGISTRATE.registerEventListeners(modEventBus);
 
-        ModBlocks.register();
-        ModItems.register();
-        ModCreativeModTabs.register(modEventBus);
+        CRBlocks.register();
+        CRBlockEntities.register();
+        CRItems.register();
+        CRPackets.register();
+        CRCreativeModTabs.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);

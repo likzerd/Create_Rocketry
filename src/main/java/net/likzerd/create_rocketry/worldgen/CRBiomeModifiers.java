@@ -12,7 +12,7 @@ import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class ModBiomeModifiers {
+public class CRBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_BAUXITE_ORE = registerKey("add_bauxite_ore");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
@@ -21,7 +21,7 @@ public class ModBiomeModifiers {
 
         context.register(ADD_BAUXITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BAUXITE_ORE_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(CRPlacedFeatures.BAUXITE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
     }
 

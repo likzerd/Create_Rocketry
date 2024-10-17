@@ -1,7 +1,6 @@
 package net.likzerd.create_rocketry.datagen;
 
 import net.likzerd.create_rocketry.CreateRocketry;
-import net.likzerd.create_rocketry.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;

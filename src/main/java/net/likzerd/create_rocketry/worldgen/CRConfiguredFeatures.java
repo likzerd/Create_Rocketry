@@ -1,7 +1,7 @@
 package net.likzerd.create_rocketry.worldgen;
 
 import net.likzerd.create_rocketry.CreateRocketry;
-import net.likzerd.create_rocketry.block.ModBlocks;
+import net.likzerd.create_rocketry.CRBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
@@ -16,7 +16,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
 
-public class ModConfiguredFeatures {
+public class CRConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> BAUXITE_ORE_KEY = registerKey("bauxite_rock");
 
@@ -25,8 +25,8 @@ public class ModConfiguredFeatures {
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
         List<OreConfiguration.TargetBlockState> overworldSapphireOres = List.of(OreConfiguration.target(stoneReplaceable,
-                        ModBlocks.BAUXITE_ROCK.get().defaultBlockState()),
-                OreConfiguration.target(deepslateReplaceables, ModBlocks.BAUXITE_ROCK.get().defaultBlockState()));
+                        CRBlocks.BAUXITE_ROCK.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, CRBlocks.BAUXITE_ROCK.get().defaultBlockState()));
 
         register(context, BAUXITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldSapphireOres, 9));
     }

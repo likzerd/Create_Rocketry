@@ -1,4 +1,8 @@
 package net.likzerd.create_rocketry.fluid;
 
-public class ModFluidTypes {
+public class CRFluids {
+    
+
+
 }
+
