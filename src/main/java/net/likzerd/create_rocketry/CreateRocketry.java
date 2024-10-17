@@ -5,10 +5,6 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.likzerd.create_rocketry.block.ModBlocks;
 import net.likzerd.create_rocketry.items.ModCreativeModTabs;
 import net.likzerd.create_rocketry.items.ModItems;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -21,6 +17,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.DeferredRegister;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
