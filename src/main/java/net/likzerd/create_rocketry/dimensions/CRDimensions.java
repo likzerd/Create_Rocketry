@@ -1,6 +1,7 @@
 package net.likzerd.create_rocketry.dimensions;
 
 import net.likzerd.create_rocketry.CreateRocketry;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
@@ -10,8 +11,11 @@ import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.dimension.BuiltinDimensionTypes;
 import net.minecraft.world.level.dimension.DimensionType;
+import net.minecraft.world.level.dimension.LevelStem;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.OptionalLong;
+
 
 public class CRDimensions {
     public static final ResourceKey<Level> SPACEDIM_KEY = ResourceKey.create(Registries.DIMENSION, new ResourceLocation(CreateRocketry.MOD_ID, "spacedim"));
@@ -36,6 +40,9 @@ public class CRDimensions {
                 new DimensionType.MonsterSettings(true, false, ConstantInt.of(0), 0)));
     }
 
+    private static void bootstrapRegistries(@NotNull BootstapContext<LevelStem> context) {
+        HolderGetter<DimensionType> typeLookUp = context.lookup(Registries.DIMENSION_TYPE);
+    }
 
     public static void register() {
         System.out.println("Registering dimensions for " + CreateRocketry.MOD_ID);
