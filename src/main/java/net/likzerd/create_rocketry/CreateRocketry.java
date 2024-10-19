@@ -2,7 +2,7 @@ package net.likzerd.create_rocketry;
 
 import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
-import net.likzerd.create_rocketry.dimension.DimRegistry;
+import net.likzerd.create_rocketry.dimensions.CRDimensions;
 import net.likzerd.create_rocketry.items.CRCreativeModTabs;
 import net.likzerd.create_rocketry.items.CRItems;
 import net.likzerd.create_rocketry.network.CRPackets;
@@ -53,7 +53,7 @@ public class CreateRocketry {
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
-        DimRegistry.DIMENSION_TYPES.register(modEventBus);
+        CRDimensions.register();
     }
 
     @NotNull
