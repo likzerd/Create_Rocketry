@@ -25,6 +25,7 @@ public class CRCreativeModTabs {
                         pOutput.accept(CRItems.BAUXITE_DUST);
                         pOutput.accept(CRItems.ALUMINIUM_INGOT);
                         pOutput.accept(CRItems.ALUMINIUM_NUGGET);
+                        pOutput.accept((CRBlocks.ELECTROLYZER));
                     })
                     .build());
 

@@ -2,11 +2,11 @@ package net.likzerd.create_rocketry;
 
 import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import net.likzerd.create_rocketry.dimension.DimRegistry;
 import net.likzerd.create_rocketry.items.CRCreativeModTabs;
 import net.likzerd.create_rocketry.items.CRItems;
 import net.likzerd.create_rocketry.network.CRPackets;
 import net.likzerd.create_rocketry.network.PacketChannel;
-import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -19,6 +19,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.DeferredRegister;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
@@ -52,6 +53,7 @@ public class CreateRocketry {
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
+        DimRegistry.DIMENSION_TYPES.register(modEventBus);
     }
 
     @NotNull

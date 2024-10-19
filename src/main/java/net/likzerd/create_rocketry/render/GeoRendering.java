@@ -8,7 +8,6 @@ import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
-import org.joml.Vector3d;
 import org.lwjgl.opengl.GL11;
 
 import java.util.List;
@@ -28,7 +27,7 @@ public class GeoRendering {
         RenderSystem.enableBlend();
 
         vBuffer.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);
-        renderCube(vBuffer, poseStack, cameraPos, 30, 1, Color.RED.setAlpha(127));
+        renderCube(vBuffer, poseStack, cameraPos.add(100, 100, 200), 30, 100, Color.GREEN);
 
         tesselator.end();
 
