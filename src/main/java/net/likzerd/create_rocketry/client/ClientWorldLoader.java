@@ -1,6 +1,6 @@
 package net.likzerd.create_rocketry.client;
 
-import net.likzerd.create_rocketry.mixin.minecraft.accessors.minecraft.ClientLevelAccessor;
+import net.likzerd.create_rocketry.mixin.accessors.minecraft.ClientLevelAccessor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.multiplayer.ClientPacketListener;
